@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: devsecops
+  name: svc
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 9999
+  selector:
+    app: devsecops
+  #type: ClusterIP
+  type: NodePort
