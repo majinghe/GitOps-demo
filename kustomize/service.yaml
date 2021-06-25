@@ -12,5 +12,5 @@ spec:
     targetPort: 9999
   selector:
     app: devsecops
-  #type: ClusterIP
-  type: NodePort
+  type: ClusterIP
+  #type: NodePort
