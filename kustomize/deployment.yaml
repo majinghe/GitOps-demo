@@ -22,7 +22,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: devsecops
-        image: dllhb/devopsday:v1.0.0
+        image: dllhb/devopsday:v1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 9999
