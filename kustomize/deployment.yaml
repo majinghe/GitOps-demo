@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: devsecops
+    app: gitsecops
   name: deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devsecops
+      app: gitsecops
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -17,13 +17,16 @@ spec:
   template:
     metadata:
       labels:
-        app: devsecops
+        app: gitsecops
     spec:
       restartPolicy: Always
       containers:
-      - name: devsecops
-        image: dllhb/devopsday:v1.0.1
+      - name: gitsecops
+        image: dllhb/gotc-gitops:1.0.0
         imagePullPolicy: Always
+        envFrom:
+          - secretRef:
+              name: secret-env
         ports:
         - containerPort: 9999
           name: http
