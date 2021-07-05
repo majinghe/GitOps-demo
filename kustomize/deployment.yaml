@@ -22,7 +22,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: gitsecops
-        image: dllhb/gotc-gitops:v2.1.0
+        image: dllhb/gotc-gitops:v3.1.0
         imagePullPolicy: Always
         envFrom:
           - secretRef:
