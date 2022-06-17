@@ -13,4 +13,3 @@ spec:
   selector:
     app: devsecops
   type: ClusterIP
-  #type: NodePort
